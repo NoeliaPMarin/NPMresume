@@ -16,6 +16,12 @@ function Terminal() {
 
   return (
     <main className="min-h-screen bg-black p-6 font-mono text-green-400">
+      {submittedCommand && (
+        <p className="mb-2">
+          <span className="mr-2" aria-hidden="true">$</span>
+          {submittedCommand}
+        </p>
+      )}
 
       <form onSubmit={handleSubmit} className="flex items-center gap-2">
         <span aria-hidden="true">$</span>
@@ -28,13 +34,6 @@ function Terminal() {
           autoFocus
         />
       </form>
-
-        {submittedCommand && (
-        <p className="mb-2">
-          <span className="mr-2" aria-hidden="true">$</span>
-          {submittedCommand}
-        </p>
-      )}
     </main>
   )
 }
