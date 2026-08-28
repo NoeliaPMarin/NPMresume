@@ -1,25 +1,7 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react'
+import { aboutText } from '../data/about'
 
 const availableCommands = ['npm help', 'npm about', 'experience', 'projects', 'contact']
-
-const aboutText = {
-  intro: {
-    name: 'Noelia Perez Marin',
-    role: 'Software Engineer · Frontend · Design',
-    statement: 'I build digital experiences where engineering meets design.',
-  },
-  background: [
-    'With a background in graphic design and professional experience in software engineering, I bring both sides of the process together: understanding how something should work and look, then building it.',
-    'My experience spans frontend and full-stack development, working with JavaScript, React, PHP, APIs, SQL, testing, and production systems.',
-  ],
-  focus: [
-    'Frontend Engineering',
-    'React & modern JavaScript',
-    'UI / UX implementation',
-    'Design systems & reusable components',
-    'Accessible, responsive interfaces',
-  ],
-}
 
 type HistoryEntry =
   | {
