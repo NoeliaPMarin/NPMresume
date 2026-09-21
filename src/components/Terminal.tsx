@@ -1,7 +1,12 @@
-import { useState, type ChangeEvent, type FormEvent } from 'react'
+import { useState, type ChangeEvent, type SubmitEvent } from 'react'
 import { aboutText } from '../data/about'
+import { skills } from '../data/skills'
+import { projects } from '../data/projects'
+import ProjectList from './ProjectList'
+import { contact } from '../data/contact'
+import ContactOutput from './ContactOutput'
 
-const availableCommands = ['npm help', 'npm about', 'experience', 'projects', 'contact']
+const availableCommands = ['npm help', 'npm about', 'npm skills', 'npm projects', 'npm contact', 'npm install noelia']
 
 type HistoryEntry =
   | {
@@ -12,17 +17,30 @@ type HistoryEntry =
       type: 'about'
       content: typeof aboutText
     }
+  | {
+      type: 'projects'
+      content: typeof projects
+    }
+  | {
+      type: 'contact'
+      content: typeof contact
+    }
+  | {
+      type: 'install noelia'
+      content: string
+    }
 
 function Terminal() {
   const [text, setText] = useState('')
   const [commandHistory, setCommandHistory] = useState<HistoryEntry[]>([])
   const command = text.trim()
+  const [, setIsInstalling] = useState(false)
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setText(event.target.value)
   }
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     if (command === '') return
@@ -46,6 +64,46 @@ function Terminal() {
       setCommandHistory((previousHistory) => [
         ...previousHistory,
         { type: 'about', content: aboutText },
+      ])
+    }
+
+    if (command === 'npm skills') {
+      setCommandHistory((previousHistory) => [
+        ...previousHistory,
+        { type: 'output', content: `Frontend: ${skills.frontend.join(', ')}` },
+        { type: 'output', content: `Backend: ${skills.backend.join(', ')}` },
+        { type: 'output', content: `Testing: ${skills.testing.join(', ')}` },
+        { type: 'output', content: `Tools: ${skills.tools.join(', ')}` },
+        { type: 'output', content: `Strengths: ${skills.strengths.join(', ')}` },
+      ])
+    }
+
+    if (command === 'npm projects') {
+      setCommandHistory((previousHistory) => [
+        ...previousHistory,
+        { type: 'projects', content: projects },
+      ])
+    }
+
+    if (command === 'npm contact') {
+      setCommandHistory((previousHistory) => [
+        ...previousHistory,
+        { type: 'contact', content: contact },
+      ])
+    }
+
+    if (!availableCommands.includes(command)) {
+      setCommandHistory((previousHistory) => [
+        ...previousHistory,
+        { type: 'output', content: `Command not found: ${command} Run \`npm help\` to see available commands.` },
+      ])
+    }
+
+    if (command === 'npm install noelia') {
+      setIsInstalling(true)
+      setCommandHistory((previousHistory) => [
+        ...previousHistory,
+        { type: 'output', content: 'Installing dependencies...' }
       ])
     }
 
@@ -77,6 +135,14 @@ function Terminal() {
               </ul>
             </section>
           )
+        }
+
+        if (entry.type === 'projects') {
+          return <ProjectList key={index} projects={entry.content} />
+        }
+
+        if (entry.type === 'contact') {
+          return <ContactOutput key={index} contact={entry.content} />
         }
 
         return (
