@@ -1,32 +1,32 @@
 export const dependencies = [
   {
-    name: 'React',
+    name: 'react',
   },
   {
-    name: 'TypeScript',
+    name: 'typescript',
   },
     {
-    name: 'Vite',
+    name: 'vite',
   },
   {
-    name: 'Tailwind CSS',
+    name: 'tailwindcss',
   },
   {
-    name: 'Experience',
+    name: 'experience',
   },
   {
-    name: 'Skills',
+    name: 'skills',
   },
   {
-    name: 'Projects',
+    name: 'projects',
   },
   {
-    name: 'Contact',
+    name: 'contact',
   },
   {
-    name: 'Curiosity',
+    name: 'curiosity',
   },
   {
-    name: 'Creativity',
+    name: 'creativity',
   },
 ]

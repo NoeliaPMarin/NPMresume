@@ -6,14 +6,15 @@ type ContactOutputProps = {
 
 function ContactOutput({ contact }: ContactOutputProps) {
   return (
-    <section className="mb-6 border-l-2 border-cyan-300/60 bg-slate-900/30 px-4 py-3 sm:px-5 sm:py-4">
+    <section className="terminal-card terminal-card-accent mb-6 px-4 py-3 sm:px-5 sm:py-4">
       <div>
-        <h1 className="mb-3 text-xl font-bold text-emerald-300">Contact Information</h1>
-        <div className="min-w-0 space-y-2 text-slate-300">
-          <p className="break-words">Phone: <a className="break-all text-cyan-200 underline decoration-cyan-300/40 underline-offset-4 hover:text-cyan-100" href={`tel:${contact.intro.phone}`}>{contact.intro.phone}</a></p>
-          <p className="break-words">Email: <a className="break-all text-cyan-200 underline decoration-cyan-300/40 underline-offset-4 hover:text-cyan-100" href={`mailto:${contact.intro.email}`}>{contact.intro.email}</a></p>
-          <p className="break-words">LinkedIn: <a className="break-all text-cyan-200 underline decoration-cyan-300/40 underline-offset-4 hover:text-cyan-100" href={contact.intro.linkedin} target="_blank" rel="noopener noreferrer">{contact.intro.linkedin}</a></p>
-          <p className="break-words">GitHub: <a className="break-all text-cyan-200 underline decoration-cyan-300/40 underline-offset-4 hover:text-cyan-100" href={contact.intro.github} target="_blank" rel="noopener noreferrer">{contact.intro.github}</a></p>
+        <h1 className="terminal-title mb-3 text-xl font-bold">Contact Information</h1>
+        <div className="terminal-copy min-w-0 space-y-2">
+          <p>Location: {contact.intro.location}</p>
+          <p className="break-words">Phone: <a className="terminal-link break-all underline underline-offset-4" href={`tel:${contact.intro.phone}`}>{contact.intro.phone}</a></p>
+          <p className="break-words">Email: <a className="terminal-link break-all underline underline-offset-4" href={`mailto:${contact.intro.email}`}>{contact.intro.email}</a></p>
+          <p>LinkedIn: <a className="terminal-link underline underline-offset-4" href={contact.intro.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn profile</a></p>
+          <p>GitHub: <a className="terminal-link underline underline-offset-4" href={contact.intro.github} target="_blank" rel="noopener noreferrer">GitHub profile</a></p>
         </div>
       </div>
     </section>

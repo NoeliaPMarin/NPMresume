@@ -16,13 +16,14 @@ export const aboutText: AboutText = {
   },
   background: [
     'With a background in graphic design and professional experience in software engineering, I bring both sides of the process together: understanding how something should work and look, then building it.',
-    'My experience spans frontend and full-stack development, working with JavaScript, React, PHP, APIs, SQL, testing, and production systems.',
+    'My experience spans frontend and full-stack development, working with JavaScript, React, PHP, APIs, SQL, testing and production systems.',
   ],
   focus: [
     'Frontend Engineering',
     'React & modern JavaScript',
     'UI / UX implementation',
     'Design systems & reusable components',
+    'Accessible, responsive interfaces',
     'Accessible, responsive interfaces',
   ],
 }

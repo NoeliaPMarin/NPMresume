@@ -18,10 +18,10 @@ function CommandInput({
   return (
     <form
       onSubmit={onSubmit}
-      className="mt-8 flex min-w-0 items-center gap-2 border-t border-slate-700/80 pt-4 sm:gap-3"
+      className="terminal-input-form mt-8 flex min-w-0 items-center gap-2 pt-4 sm:gap-3"
       aria-label="Command entry form"
     >
-      <span aria-hidden="true" className="shrink-0 font-bold text-emerald-400">
+      <span aria-hidden="true" className="terminal-prompt shrink-0 font-bold">
         $
       </span>
       <label className="sr-only" htmlFor="terminal-command">
@@ -33,7 +33,7 @@ function CommandInput({
         type="text"
         value={text}
         onChange={onChange}
-        className="min-w-0 flex-1 bg-transparent text-slate-100 outline-none placeholder:text-slate-500 caret-emerald-400 focus-visible:ring-2 focus-visible:ring-emerald-300/80 focus-visible:ring-offset-4 focus-visible:ring-offset-[#070b12] disabled:cursor-not-allowed disabled:opacity-50"
+        className="terminal-input min-w-0 flex-1 bg-transparent outline-none disabled:cursor-not-allowed disabled:opacity-50"
         aria-describedby="terminal-command-help"
         placeholder="Type npm help to explore"
         autoFocus
