@@ -8,7 +8,7 @@ function ProjectList({ projects }: ProjectListProps) {
   return (
     <section className="mb-6 space-y-4">
       {projects.map((project) => (
-        <article key={project.id} className="space-y-3 border-l-2 border-cyan-300/60 bg-slate-900/30 px-4 py-3 sm:px-5 sm:py-4">
+        <article key={project.id} className="space-y-3 rounded-xl border border-slate-700/80 bg-slate-900/40 p-4 sm:p-5">
           <div>
             <h2 className="font-bold text-emerald-300">{project.title}</h2>
             <p className="text-sm text-slate-400">{project.role}{project.company && ` · ${project.company}`}</p>

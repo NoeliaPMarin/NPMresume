@@ -53,7 +53,7 @@ function CommandHistory({
   return (
     <>
       {commandHistory.length === 0 && !isInstalled && (
-        <p className="mb-5 border-l-2 border-emerald-400/70 bg-emerald-400/5 px-4 py-3 text-sm text-emerald-200">
+        <p className="mb-5 rounded-lg border border-emerald-400/20 bg-emerald-400/5 px-4 py-3 text-sm text-emerald-200">
           Tip: run{' '}
           <code className="bg-emerald-400/10 px-1.5 py-0.5 text-emerald-300">
             npm install noelia
@@ -73,7 +73,7 @@ function CommandHistory({
         {commandHistory.map((entry, index) => {
           if (entry.type === 'about') {
             return (
-              <section key={index} className="mb-6 space-y-4 border-l-2 border-emerald-400/60 bg-slate-900/30 px-4 py-3 sm:px-5 sm:py-4">
+              <section key={index} className="mb-6 space-y-4 rounded-xl border border-slate-700/80 bg-slate-900/40 p-4 sm:p-5">
                 <div>
                   <h1 className="text-xl font-bold text-emerald-300">
                     {entry.content.intro.name}

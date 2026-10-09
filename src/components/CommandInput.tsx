@@ -18,7 +18,7 @@ function CommandInput({
   return (
     <form
       onSubmit={onSubmit}
-      className="mt-8 flex min-w-0 items-center gap-2 border-t border-slate-700/80 pt-4 sm:gap-3"
+      className="mt-6 flex min-w-0 items-center gap-2 rounded-lg border border-slate-700 bg-[#080c11] px-4 py-3 shadow-inner shadow-black/30 transition-colors focus-within:border-emerald-400/70 sm:gap-3"
       aria-label="Command entry form"
     >
       <span aria-hidden="true" className="shrink-0 font-bold text-emerald-400">

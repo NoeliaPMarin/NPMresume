@@ -6,7 +6,7 @@ type ContactOutputProps = {
 
 function ContactOutput({ contact }: ContactOutputProps) {
   return (
-    <section className="mb-6 border-l-2 border-cyan-300/60 bg-slate-900/30 px-4 py-3 sm:px-5 sm:py-4">
+    <section className="mb-6 rounded-xl border border-slate-700/80 bg-slate-900/40 p-4 sm:p-5">
       <div>
         <h1 className="mb-3 text-xl font-bold text-emerald-300">Contact Information</h1>
         <div className="min-w-0 space-y-2 text-slate-300">

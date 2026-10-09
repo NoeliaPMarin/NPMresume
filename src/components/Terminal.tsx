@@ -99,18 +99,23 @@ const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#070b12] px-4 py-6 font-mono text-slate-200 sm:px-6 lg:px-8 lg:py-10">
       <section
-        className="mx-auto flex min-h-[calc(100vh-3rem)] w-full min-w-0 max-w-5xl flex-col lg:min-h-[calc(100vh-5rem)]"
+        className="mx-auto flex min-h-[calc(100vh-3rem)] w-full min-w-0 max-w-5xl flex-col overflow-hidden rounded-2xl border border-slate-700/80 bg-[#0d1117] shadow-2xl shadow-black/40 lg:min-h-[calc(100vh-5rem)]"
         aria-label="Interactive portfolio terminal"
         aria-busy={isInstalling}
       >
-        <div className="mb-6 flex items-center justify-between border-b border-slate-700/80 pb-3 text-xs sm:text-sm">
-          <p className="min-w-0 truncate font-semibold tracking-wide text-slate-300">
+        <header className="flex items-center justify-between border-b border-slate-700/80 bg-slate-900/70 px-4 py-3 sm:px-5">
+          <div className="flex items-center gap-2" aria-hidden="true">
+            <span className="h-3 w-3 rounded-full bg-rose-400" />
+            <span className="h-3 w-3 rounded-full bg-amber-300" />
+            <span className="h-3 w-3 rounded-full bg-emerald-400" />
+          </div>
+          <p className="min-w-0 truncate text-xs font-semibold tracking-wide text-slate-300 sm:text-sm">
             noelia@portfolio:~
           </p>
-          <span className="ml-4 hidden shrink-0 text-emerald-300 sm:block">React + TypeScript</span>
-        </div>
+          <span className="ml-4 hidden shrink-0 text-xs text-emerald-300 sm:block">React + TypeScript</span>
+        </header>
 
-        <div className="flex flex-1 flex-col">
+        <div className="flex flex-1 flex-col p-4 sm:p-6">
           <CommandHistory
             commandHistory={commandHistory}
             isInstalled={isInstalled}
