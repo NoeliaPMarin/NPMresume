@@ -112,7 +112,7 @@ export const commands: Record<string, CommandHandler> = {
   },
 
   'npm download cv': () => ({
-    downloadUrl: '/cv-software-engineer.pdf',
+    downloadUrl: `${import.meta.env.BASE_URL}cv-software-engineer.pdf`,
     entries: [
       { type: 'output', content: 'Downloading CV...' },
     ],
