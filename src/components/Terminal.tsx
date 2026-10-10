@@ -16,7 +16,7 @@ function Terminal() {
   const inputRef = useRef<HTMLInputElement>(null)
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setText(event.target.value)
+    setText(event.target.value.toLowerCase())
   }
 
   const downloadFile = (url: string) => {
