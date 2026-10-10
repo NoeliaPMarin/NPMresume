@@ -14,6 +14,28 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'npm-resume',
+    title: 'NPM Resume - Interactive Terminal Portfolio',
+    description: 'An interactive portfolio presented as a command-line experience, built around the playful connection between my initials and npm.',
+    role: 'Software Engineer & Designer',
+    year: '2026',
+    stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'GitHub Pages'],
+    contributions: [
+      'Designed and built a command-driven portfolio interface with dedicated sections for experience, skills, projects, education and contact details.',
+      'Created interactive commands, simulated package installation feedback and an accessible command history to make the experience feel terminal-native.',
+      'Implemented classic and modern visual themes, with responsive layouts and reusable React components.',
+      'Configured continuous deployment with GitHub Actions and published the site on a custom domain.',
+    ],
+    highlights: [
+      'Interactive portfolio',
+      'Custom command system',
+      'Custom domain deployment',
+    ],
+    status: 'production',
+    link: 'https://noeliaperezmarin.com',
+  },
+
+  {
     id: "external-training",
     title: 'TES Develop - External Training Records Feature',
     company: 'TES Develop',
