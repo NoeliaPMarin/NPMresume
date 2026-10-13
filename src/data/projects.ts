@@ -14,6 +14,28 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'taskify',
+    title: 'Taskify - Full-Stack Task Management App',
+    description: 'A full-stack task-management app designed to turn plans into finished work, combining a polished product experience with secure account access and persistent personal workspaces.',
+    role: 'Product Designer & Full-Stack Engineer',
+    year: '2026',
+    stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'Neon'],
+    contributions: [
+      'Led the product design process from wireframes and UX flows to a responsive visual system and refined user interface.',
+      'Built the frontend experience, including authentication, protected routes, task creation, search, filters, sorting, editing, deletion and dashboard statistics.',
+      'Developed a REST API with Node.js and Express, secure bearer-token authentication, salted password hashing, rate limiting and per-user data isolation.',
+      'Delivered the production architecture across Netlify, Render and Neon PostgreSQL, including a friction-free demo workspace with automatic cleanup.',
+    ],
+    highlights: [
+      'End-to-end product ownership',
+      'Full-stack architecture',
+      'UX to production deployment',
+    ],
+    status: 'production',
+    link: 'https://taskify-app-dev.netlify.app',
+  },
+
+  {
     id: 'npm-resume',
     title: 'NPM Resume - Interactive Terminal Portfolio',
     description: 'An interactive portfolio presented as a command-line experience, built around the playful connection between my initials and npm.',
