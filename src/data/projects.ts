@@ -7,6 +7,7 @@ export type Project = {
   stack: string[]
   contributions: string[]
   highlights?: string[]
+  productionNote?: string
   status?: 'production' | 'in-development'
   year: string
   link?: string
@@ -83,6 +84,7 @@ export const projects: Project[] = [
       'UX to implementation to QA to production',
       'Production release',
     ],
+    productionNote: 'Live feature used by TES Develop customers',
     status: "production",
   },
 
@@ -105,6 +107,7 @@ export const projects: Project[] = [
       'External product integration',
       'Shared design-system implementation',
     ],
+    productionNote: 'Live feature used by TES Develop customers',
     status: 'production',
   },
 ];

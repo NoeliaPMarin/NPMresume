@@ -16,6 +16,10 @@ function ProjectList({ projects }: ProjectListProps) {
           <p className="terminal-copy">{project.description}</p>
           <p className="terminal-stack break-words text-sm">{project.stack.join(' · ')}</p>
 
+          {project.productionNote && (
+            <p className="terminal-success text-sm font-semibold">✓ {project.productionNote}</p>
+          )}
+
           <ul className="terminal-list list-inside list-disc space-y-1 text-sm">
             {project.contributions.map((contribution) => (
               <li key={contribution}>{contribution}</li>
